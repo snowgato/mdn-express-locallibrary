@@ -36,9 +36,8 @@ const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 db_pwd=process.env.MONGOATLASPWD;
 //console.log(db_pwd);
-//const mongoDB=`mongodb+srv://gllisse:${db_pwd}@cluster0.caf7zzl.mongodb.net/local_library?retryWrites=true&w=majority`;
-//const mongoDB=`mongodb+srv://XXXXgllisseYYYY:${db_pwd}@cluster0.caf7zzl.mongodb.net/local_library?retryWrites=true&w=majority`;
-const mongoDB=`mongodb+srv://gllisse:${db_pwd}@cluster1.lxd3wmg.mongodb.net/?retryWrites=true&w=majority`;
+//const mongoDB=`mongodb+srv://gllisse:${db_pwd}@cluster1.lxd3wmg.mongodb.net/?retryWrites=true&w=majority`;
+const mongoDB=process.env("MONGODB_URI");//setting for railway inner mongodb database
 //console.log(mongoDB);
 //const mongoDB = "mongodb://localhost:27017/mydb";
 
