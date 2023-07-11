@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= genre_name + ' Books ' 
+
+  ul
+    each book in genre_books
+      li
+        a(href=book.url) #{book.title}
+        |  (#{book.author.name})
+    else
+      li There are no books.

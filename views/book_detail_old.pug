@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title+ " for "+ book.title
+  p #{book.summary}
+  |
+  a(href=book.url) #{book.title}
+  |  by !{book.author.name} 
+  ul
+    each bInst in book_instances
+      if bInst.status == "Available"
+        li
+          | Status 
+          a(href=bInst.url) #{bInst.imprint}
+          |Ka
+        //- li Status <a href=#{bInst.url}>#{bInst.status}</a> #{bInst.imprint}
+        //- a(href=bInst.url) #{bInst.imprint}
+      //-  li Status: #{bInst.status} 
+      //-  a(href=bInst.url) #{bInst.imprint} 
+      else
+         li Status: #{bInst.status} #{bInst.imprint}  #{bInst.status === "Loaned" ? "Due back : " + bInst.due_back_formatted : ''}
+    else 
+      li There are no instance for #{book.title} .

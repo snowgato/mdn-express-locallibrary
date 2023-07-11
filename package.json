@@ -1,0 +1,44 @@
+{
+  "name": "express-locallibrary-tutorial",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "devstart": "nodemon --inspect ./bin/www",
+    "serverstart": "DEBUG=express-locallibrary-tutorial:* npm run devstart"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "express-rate-limit": "^6.7.1",
+    "express-validator": "^7.0.1",
+    "glob-parent": "^5.1.2",
+    "got": "^11.8.5",
+    "helmet": "^7.0.0",
+    "http-errors": "~1.6.3",
+    "lodash": "^4.17.21",
+    "luxon": "^3.3.0",
+    "mongoose": "^7.3.2",
+    "morgan": "~1.9.1",
+    "package-json": "^6.5.0",
+    "pug": "3.0.1",
+    "qs": "^6.5.3"
+  },
+  "overrides": {
+    "graceful-fs": "^4.1.0",
+    "nodemon": {
+      "minimatch": "3.0.5",
+      "update-notifier": {
+        "latest-version": {
+          "package-json": "6.5.0"
+        }
+      }
+    }
+  },
+  "devDependencies": {
+    "nodemon": "1.3"
+  }
+}
