@@ -37,7 +37,7 @@ mongoose.set("strictQuery", false);
 db_pwd=process.env.MONGOATLASPWD;
 //console.log(db_pwd);
 //const mongoDB=`mongodb+srv://gllisse:${db_pwd}@cluster1.lxd3wmg.mongodb.net/?retryWrites=true&w=majority`;
-const mongoDB=process.env("MONGODB_URI");//setting for railway inner mongodb database
+const mongoDB=process.env.MONGODB_URI;//setting for railway inner mongodb database
 //console.log(mongoDB);
 //const mongoDB = "mongodb://localhost:27017/mydb";
 
